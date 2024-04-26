@@ -9,18 +9,15 @@ public class Contador {
         int parametroDois = terminal.nextInt();
 
         try {
-
             Contar(parametroUm, parametroDois);
-
-        }catch (ParametrosInvalidosException exception) {
+        } catch (ParametrosInvalidosException exception) {
             System.out.println(exception);
-        }
-        catch (Exception exception) {
+        } catch (Exception exception) {
             System.out.println("Ocorreu um erro inesperado: " + exception.getMessage());
         }
-
     }
-    static void Contar(int parametroUm, int parametroDois ) throws ParametrosInvalidosException {
+
+    static void Contar(int parametroUm, int parametroDois) throws ParametrosInvalidosException {
         if (parametroUm > parametroDois) {
             throw new ParametrosInvalidosException("O segundo parâmetro deve ser maior que o primeiro");
         }
